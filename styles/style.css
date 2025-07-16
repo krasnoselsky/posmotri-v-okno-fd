@@ -235,11 +235,14 @@ ol {
 }
 
 .button {
-  margin: 3% 0;
+  margin: 4% 0;
 padding: 1% 10%;
-border: 2px solid white;
+border: 1px solid white;
 background-color: #1b1919;;
 color: white;
+font-size: 17px;
+font-weight:bold;
+font-family: Fira Sans Condensed;
 }
   
 .button:hover{
