@@ -293,13 +293,22 @@ input[type="checkbox"] {
     height: 20px;
     border: 1px solid #fff;
     background: #1b1919; 
+	z-index: 0;
 }
 
 
 
-input[type="checkbox"]:checked + .search-form__label_::before {
+input[type="checkbox"]:checked + .search-form__label_:checked + .search-form__label_::before {
+     content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #1b1919;
     background: #ffffff; 
-}
+	z-index: 1;
+	}
 
 .search-form__label_:focus-visible,
  input[type="checkbox"]:focus-visible{
