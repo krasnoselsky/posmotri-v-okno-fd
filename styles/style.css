@@ -73,9 +73,9 @@ ol {
     width: max-content;
     overflow-y: auto;
     display: grid;
-    gap: 20px;
-    max-height: 322px;
-    min-height: 322px;
+    gap: 5px;
+    max-height: 323px;
+    min-height: 323px;
 }
 
 .content__details {
@@ -131,16 +131,19 @@ ol {
 }
 
 .title {
+	position: relative;
     font-family: Oswald, sans-serif;
     font-weight: 700;
     font-style: bold;
     font-size: 75px;
     line-height: 94%;
     text-transform: uppercase;
+	
 }
 
 .content__accent {
     color: rgba(128, 128, 128, 0.45);
+	
 }
 
 .content__card-link {
