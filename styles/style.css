@@ -341,6 +341,7 @@ input[type="checkbox"]:active {
 }
 
 .content__card-link:hover {
+	cursor: pointer;
     text-decoration: underline;
 }
 
@@ -355,7 +356,25 @@ input[type="checkbox"]:active {
 }
 .content__card-link_current {
     background-color: #615a5a;
+	cursor: pointer;
+	outline: none;
 }
+
+
+.content__card-link_current:hover {
+    text-decoration: underline;
+	cursor: pointer;
+}
+.content__card-link_current:active {
+    text-decoration: none;
+	cursor: pointer;
+	background-color: #615a5a;
+}
+.content__card-link_current:focus-visible{
+	outline: none;
+	border: 1px solid white;
+}
+
 .more-button {
     width: 100%;
 }
