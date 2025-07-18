@@ -74,8 +74,8 @@ ol {
     overflow-y: auto;
     display: grid;
     gap: 5px;
-    max-height: 323px;
-    min-height: 323px;
+    max-height: 325px;
+    min-height: 325px;
 }
 
 .content__details {
