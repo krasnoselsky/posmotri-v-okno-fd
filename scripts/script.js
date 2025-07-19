@@ -306,14 +306,3 @@ function showMoreCards({
     }
   });
 }
- const checkboxes = document.querySelectorAll('.search-form__pseudo-checkbox');
-
-checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', () => {
-        checkboxes.forEach(otherCheckbox => {
-            if (otherCheckbox !== checkbox) {
-                otherCheckbox.checked = false;
-            }
-        });
-    });
-});
