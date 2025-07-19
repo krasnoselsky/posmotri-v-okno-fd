@@ -122,7 +122,9 @@ ol {
 .content__video-card-description-container {
     flex-grow: 1;
 }
-
+.content__video-card-description{
+text-overflow: ellipsis;
+}
 .search-form__fieldset-title {
     font-family: "Fira Sans Condensed", sans-serif;
     font-weight: 400;
@@ -147,6 +149,7 @@ ol {
 }
 
 .content__card-link {
+    display: block;
     text-decoration: none;
     font-family: "Fira Sans Condensed", sans-serif;
     font-weight: 400;
@@ -200,6 +203,7 @@ ol {
 
 .search-form__label:focus-visible {
     outline: 1px solid white;
+    outline-offset:1px;
 }
 
 .search-form__textfield {
@@ -248,6 +252,7 @@ ol {
 
 .button:focus-visible {
     outline: 1px solid white;
+    outline-offset:1px;
 }
 
 input[type="text"] {
@@ -256,6 +261,7 @@ input[type="text"] {
 
 input[type="text"]:focus-visible + span {
     outline: 1px solid white;
+    outline-offset:1px;
 }
 
 input[type="checkbox"] {
@@ -263,9 +269,6 @@ input[type="checkbox"] {
     height: 20px;
     inline-size: 1px;
     block-size: 1px;
-    overflow: hidden;
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
     white-space: nowrap;
     display: none;
     outline: none;
@@ -293,8 +296,6 @@ input[type="checkbox"] + .search-form__pseudo-checkbox::before {
     height: 14px;
     background-size: cover;
     background: #1b1919;
-    align-self: center;
-    text-align: center;
     margin: 0 11%;
 }
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
@@ -317,20 +318,17 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 
 .search-form__label_ {
     position: relative;
-    top: 0;
-    left: 0;
     display: flex;
     cursor: pointer;
-    padding: 4% 0;
+    margin: 4% 0;
     justify-self: start;
     gap: 8px;
     outline: none;
 }
 
 .search-form__label_:focus-visible {
-    border: 1px solid white;
-    outline: none;
-    margin: 0;
+    outline: 1px solid white;
+    outline-offset:1px;
 }
 input[type="checkbox"]:focus-visible {
     border: 1px solid white;
@@ -377,14 +375,14 @@ input[type="checkbox"]:active {
     
 }
 .content__card-link_current {
-    background-color: #615a5a;s
+    background-color: #615a5a;
     cursor: pointer;
     outline: none;
 }
-.content__card-link_current::before {
+.content__card-link_current:active{
     background-color: #615a5a;
-    outline: none;
 }
+
 
 .more-button {
     position: relative;
@@ -408,9 +406,9 @@ input[type="checkbox"]:active {
     outline:none;
 }
 
-input[type="text"]:focus {
-    border: 1px solid white;
-    outline: none;
+input[type="text"]:focus-visible {
+    outline: 1px solid white;
+    outline-offset:1px;
 }
 button:focus {
     border: 1px solid white;
