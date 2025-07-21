@@ -312,7 +312,7 @@ input[type="checkbox"] + .search-form__pseudo-checkbox::before {
     height: 16px;
     background-size: cover;
     background: #1b1919;
-    margin: 0 6%;
+    margin: 0 5%;
 }
 input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
     content: "";
