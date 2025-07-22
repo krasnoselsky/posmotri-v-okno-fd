@@ -72,8 +72,8 @@ ol {
 .content__list-container {
     position: relative;
     left: 0;
-    min-width: 408px;
-    overflow-y: auto;
+    min-width: 400px;
+    overflow: auto;
     display: grid;
     max-height: 305px;
     min-height: 305px;
@@ -87,7 +87,9 @@ ol {
 
 .content__video-card {
     display: flex;
-    width: 395px;
+    width: 390px;
+    flex-direction: row;
+    justify-content: space-between
 }
 
 .result__video-container {
@@ -104,37 +106,32 @@ ol {
     height: 100%;
 }
 
-.content__list {
-    display: grid;
-    gap: 12px;
-    max-width: 410px;
-    position: static;
-}
+
 
 .content__video-card-thumbnail {
     object-fit: cover;
     object-position: center;
-    min-width: 180px;
+    min-width: 195px;
     height: 105px;
 }
 
 .content__video-card-description-container {
     flex-grow: 1;
-    width: 150px;
+    
 }
 
 .content__video-card-description-container:hover {
     text-decoration: underline;
 }
 .content__video-card-description {
-    position: relative;
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 200px;
-    white-space: pre-line;
-    max-height: 70px;
-    margin-top: 0.8%;
+   width: 170px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  white-space: pre-line;
+
+    
 }
 .search-form__fieldset-title {
     font-family: "Fira Sans Condensed", sans-serif;
@@ -171,19 +168,23 @@ ol {
     white-space: nowrap;
     text-overflow: ellipsis;
     outline: none;
+    color: pointer;
 }
 
 .content__video-card-title {
+    position: relative;
     display: block;
     font-family: Oswald, sans-serif;
     font-weight: 700;
     font-style: bold;
     font-size: 30px;
+    max-width: 195px;
     text-transform: uppercase;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     line-height: 1;
+    
 }
 
 .content__video-card-title:hover {
@@ -218,6 +219,9 @@ ol {
     outline: none;
 }
 
+.search-form__label:focus{
+    outline: none;
+}
 .search-form__label:focus-visible {
     outline: 1px solid white;
     outline-offset: 1px;
@@ -237,6 +241,10 @@ ol {
     color: white;
     appearance: none;
 }
+
+.search-form__label-text:focus{
+    outline: none;
+}
 .search-form__label-text:focus-visible {
     border: 1px solid white;
     outline: none;
@@ -247,7 +255,7 @@ ol {
 
 .button {
     margin: 2.3% 0.1%;
-    padding: 0.8% 10.5%;
+    padding: 0.8% 10.3%;
     border: 1px solid white;
     background-color: #1b1919;
     color: white;
@@ -265,7 +273,9 @@ ol {
     background-color: #615a5a;
     text-decoration: none;
 }
-
+.button:focus{
+    outline: none;
+}
 .button:focus-visible {
     outline: 1px solid white;
     outline-offset: 1px;
@@ -297,10 +307,16 @@ input[type="checkbox"] {
     flex-shrink: 0;
     outline: none;
 }
+
+.search-form__pseudo-checkbox:focus{
+    outline: none;
+}
 .search-form__pseudo-checkbox:focus-visible {
     outline: 1px solid white;
 }
-
+.search-form__checkbox-list:focus{
+    outline: none;
+}
 .search-form__checkbox-list:focus-visible {
     outline: none;
     border: 1px solid white;
@@ -337,10 +353,15 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
     gap: 5px;
     outline: none;
 }
-
+.search-form__label_:focus{
+    outline: none;
+}
 .search-form__label_:focus-visible {
     outline: 1px solid white;
     outline-offset: 1px;
+}
+input[type="checkbox"]:focus{
+    outline: none;
 }
 input[type="checkbox"]:focus-visible {
     border: 1px solid white;
@@ -362,9 +383,7 @@ input[type="checkbox"]:active {
     z-index: 1;
 }
 
-.content__card-link {
-    color: pointer;
-}
+
 
 .content__card-link:hover {
     cursor: pointer;
@@ -372,14 +391,16 @@ input[type="checkbox"]:active {
 }
 
 .content__card-link:active {
-    background-color: #312e2e;
+    background-color: #615a5a;
     text-decoration: none;
 }
 
 .content__card-link:focus {
     outline: none;
 }
-
+.content__list-item:focus{
+    outline: none;
+}
 .content__list-item:focus-visible {
     border: 1px solid white;
     outline: none;
@@ -392,7 +413,7 @@ input[type="checkbox"]:active {
 
 .more-button {
     position: relative;
-    width: 97%;
+    width: 99%;
     padding: 1.5% 0;
     margin-top: 6%;
     margin-bottom: 0.5%;
@@ -405,6 +426,10 @@ input[type="checkbox"]:active {
 .content__card-link_current:hover {
     text-decoration: underline;
 }
+
+input[type="text"]:focus{
+    outline: none;
+}
 input[type="text"]:focus-visible {
     outline: 1px solid white;
     outline-offset: 1px;
@@ -414,12 +439,16 @@ button:focus {
     outline: none;
 }
 
+.content__list {
+    display: grid;
+    gap: 17px;
+    max-width: 410px;
+    position: static;
+    margin: 0 1%;
+}
 .content__list-item {
-    margin: 2% 1%;
+    padding-top: 2.5%;
     outline: none;
 }
 
-.content__video-card-thumbnail {
-    width: 200px;
-    min-height: 105px;
-}
+
